@@ -2,7 +2,7 @@
 
 This project serves to display a web interface showing a list of cars along with some details about them in "cards" as shown in the diagram.
 
-![Description](../tapaScriptCars.png)
+![Description](./images/tapaScriptCars.png)
 
 ## How to run it
 - Clone this repository.
@@ -10,15 +10,15 @@ This project serves to display a web interface showing a list of cars along with
 - Run "npm install" or "bun install". This will install all the dependencies.
 - After the installation is complete, run "bun dev" or "npm start" to start the app. It will provide a URL looking like this:
 
-![Description](../localhostURL.png)
+![Description](./images/localhostURL.png)
 
 - Go to the given URL in a browser and Voila! your app is up and running.
 
 ## UX Design of the app
-![Description](../webView.png)
+![Description](./images/webView.png)
 
 ## Component Breakdown Diagram
-![Description](../ComponentBreakDown.png)
+![Description](./images/ComponentBreakDown.png)
 
 ## React Dev Tools Screenshot
-![Description](../ReactDevToolsScreenshot.png)
+![Description](./images/ReactDevToolsScreenshot.png)
