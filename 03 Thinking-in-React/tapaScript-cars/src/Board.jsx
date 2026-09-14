@@ -19,11 +19,9 @@ function Board() {
     const toggleFeatured = () => {
         if(premiumToggle===true) {
             setPremiumToggle(false);
-            console.log("now false");
             setCars(CARS);
         } else {
-            setPremiumToggle(true);
-            console.log("now true");
+            setPremiumToggle(true); 
             setCars(cars.filter((car) => car.isPremium === true));
         }
     }
