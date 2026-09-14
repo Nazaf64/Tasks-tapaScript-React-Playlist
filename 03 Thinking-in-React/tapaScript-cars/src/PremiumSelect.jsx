@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function PremiumSelect({ premiumToggle, onPremiumSelect }) {
     return (
         <div className="flex items-center max-w-0.8">
@@ -13,5 +15,10 @@ function PremiumSelect({ premiumToggle, onPremiumSelect }) {
         </div>
     )
 }
+
+PremiumSelect.propTypes = {
+    premiumToggle: PropTypes.bool.isRequired,
+    onPremiumSelect: PropTypes.func.isRequired,
+};
 
 export default PremiumSelect;

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function SearchText({ searchTerm, onSearch }) {
     return (
         <form>
@@ -11,5 +13,10 @@ function SearchText({ searchTerm, onSearch }) {
         </form>
     )
 }
+
+SearchText.propTypes = {
+    searchTerm: PropTypes.string.isRequired,
+    onSearch: PropTypes.func.isRequired,
+};
 
 export default SearchText;

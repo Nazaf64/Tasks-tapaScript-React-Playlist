@@ -1,4 +1,5 @@
 import Car from './Car';
+import PropTypes from "prop-types";
 
 function ListBoard({ cars, searchTerm }) {
     const rows = [];
@@ -15,5 +16,19 @@ function ListBoard({ cars, searchTerm }) {
         </div>
     )
 }
+
+ListBoard.propTypes = {
+    cars: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            title: PropTypes.string.isRequired,
+            brand: PropTypes.string.isRequired,
+            year: PropTypes.number.isRequired,
+            price: PropTypes.number.isRequired,
+            isPremium: PropTypes.bool.isRequired,
+        })
+    ).isRequired,
+    searchTerm: PropTypes.string.isRequired,
+};
 
 export default ListBoard;
