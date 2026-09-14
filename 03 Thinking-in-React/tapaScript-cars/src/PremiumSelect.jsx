@@ -1,7 +1,14 @@
-function PremiumSelect() {
+function PremiumSelect({ premiumToggle, onPremiumSelect }) {
     return (
         <div className="flex items-center max-w-0.8">
-            <input type="checkbox" className="mr-2" />
+            <input 
+            type="checkbox" 
+            className="mr-2"
+            checked={premiumToggle}
+            onChange={() => {
+                onPremiumSelect()
+            }}
+            />
             <p>Show Premium Only</p>
         </div>
     )
