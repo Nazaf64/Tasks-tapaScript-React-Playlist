@@ -21,7 +21,7 @@ This project serves to display a web interface showing a list of cars along with
 ![Description](../ComponentBreakDown.png)
 
 ## State Props Passdown Diagram
-![Description]()
+![Description](../StatePropsPassdownDiagram.png)
 
 ## React Dev Tools Screenshot
 ![Description](../ReactDevToolsScreenshot.png)
