@@ -1,6 +1,13 @@
-function UserCard() {
+
+
+function UserCard({ name, age, occupation }) {
     return(
-        <h3>UserCard</h3>
+        <>
+            <p><strong>Name: </strong>{name}</p>
+            <p><strong>Age: </strong>{age}</p>
+            <p><strong>Occupation: </strong>{occupation}</p>
+        </>
+        
     )
 }
 

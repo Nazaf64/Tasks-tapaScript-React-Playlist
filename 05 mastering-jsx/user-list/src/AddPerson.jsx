@@ -1,6 +1,6 @@
-function AddPerson() {
+function AddPerson({ add }) {
     return(
-        <h2>AddPerson</h2>
+        <button onClick={add}>+</button>
     )
 }
 
