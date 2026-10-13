@@ -71,11 +71,14 @@ function MainBoard() {
     }
 
     return (
-        <div className='border-2 rounded-3xl m-6 p-8'>
-            <h1>{count}</h1>
-            <AddPerson add={add} />
-            <ListBoard people={people} />            
+        <div className='box-border flex justify-center items-center'>
+            <div className='border-2 rounded-3xl m-6 p-8 max-w-300'>
+                <h1>{count}</h1>
+                <AddPerson add={add} />
+                <ListBoard people={people} />            
+            </div>
         </div>
+        
     )
 }
 
