@@ -3,6 +3,7 @@ import UserCard from './UserCard';
 
 function ListBoard ({ people }) {
     const peopleList = [];
+    // console.log(people);
     people.forEach((person) => {
         peopleList.push(<UserCard key={person.id} name={person.name} age={person.age} occupation={person.occupation} />)
     });

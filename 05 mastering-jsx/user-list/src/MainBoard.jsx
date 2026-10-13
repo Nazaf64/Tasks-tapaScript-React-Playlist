@@ -39,10 +39,8 @@ function MainBoard() {
     const [people, setPeople] = useState(data);
     
     // COUNT OF PERSONS
-    let personCount = people.count;
-    const [count, setCount] = useState(personCount);
-
-
+    // let personCount = data.length;
+    const [count, setCount] = useState(data.length);
 
     // GENERATE RANDOM WORDS FOR NEW NAMES
     const wordGenerate = () => {
@@ -52,7 +50,7 @@ function MainBoard() {
                 result += String.fromCharCode(97 + Math.floor(Math.random() * 26));
             }
         return result;
-    }    
+    }
 
     const add = () => {
         // CREATE NEW OBJECT FOR A NEW PERSON
@@ -61,17 +59,20 @@ function MainBoard() {
         // ADD NEW PERSON'S DETAILS IN THE OBJECT
         newData.id = crypto.randomUUID();
         newData.name = wordGenerate();
-        newData.age = Math.floor(Math.random() * 85)
+        newData.age = Math.floor(Math.random() * 85);
         newData.occupation = wordGenerate();
 
         // APPEND THE NEW OBJECT TO THE EXISTING ARRAY OF PEOPLE
-        setPeople([...people, newData]);
-        setCount(count++);
-        console.log(count);
+        setPeople(people => [...people, newData]);
+        
+        // UPDATE THE COUNT WITH THE NEW ENTRY INCLUDED
+        setCount(count => count + 1);
+
     }
 
     return (
         <>
+            <h1>{count}</h1>
             <AddPerson add={add} />
             <ListBoard people={people} />            
         </>
