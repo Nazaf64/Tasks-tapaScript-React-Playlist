@@ -71,10 +71,12 @@ function MainBoard() {
     }
 
     return (
-        <div className='box-border flex justify-center items-center'>
-            <div className='border-2 rounded-3xl m-6 p-8 max-w-300'>
-                <h1>{count}</h1>
-                <AddPerson add={add} />
+        <div className='box-border flex justify-center items-center max-w-full'>
+            <div className='container border-2 rounded-3xl m-6 p-8 max-w-150'>
+                <div className='flex flex-wrap justify-between pb-3'>
+                    <h1 className='container max-w-35 border-2 rounded-3xl pl-3 pr-3 pt-1 pb-1 mb-1 text-center'>User count: {count}</h1>
+                    <AddPerson add={add} />
+                </div>                
                 <ListBoard people={people} />            
             </div>
         </div>
