@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types";
 
 function UserCard({ name, age, occupation }) {
     return(
@@ -10,5 +10,11 @@ function UserCard({ name, age, occupation }) {
         
     )
 }
+
+UserCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+    occupation: PropTypes.string.isRequired,
+};
 
 export default UserCard;

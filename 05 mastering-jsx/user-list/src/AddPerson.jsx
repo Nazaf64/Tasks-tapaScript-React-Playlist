@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function AddPerson({ add }) {
     return(
         <button
@@ -5,5 +7,9 @@ function AddPerson({ add }) {
         onClick={add}>+</button>
     )
 }
+
+AddPerson.propTypes = {
+    add: PropTypes.func.isRequired,
+};
 
 export default AddPerson;

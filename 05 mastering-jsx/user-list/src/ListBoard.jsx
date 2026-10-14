@@ -1,4 +1,5 @@
 import UserCard from './UserCard';
+import PropTypes from "prop-types";
 
 
 function ListBoard ({ people }) {
@@ -10,5 +11,16 @@ function ListBoard ({ people }) {
 
     return peopleList;
 }
+
+ListBoard.propTypes = {
+    people: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            age: PropTypes.number.isRequired,
+            occupation: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+};
 
 export default ListBoard;
